@@ -80,9 +80,7 @@ $ python model_gen.py
 ```
 This script will generate csv files for plotting the modeled performance curves.
 
-* Evaluation and expected result
-
-The output will include the following components:
+* Evaluation and expected result: The output will include the following components:
   * Input problem size.
   * Running time (in seconds).
   * Effective GFLOPS (circle{1} in Figure 5).
