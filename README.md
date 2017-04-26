@@ -24,7 +24,7 @@ $ export KMP_AFFINITY=compact,1
 
 * Code generators:
 
-  1. If you want to generate the different implementations for a specific algorithm:
+If you want to generate the different implementations for a specific algorithm:
 
 ```
 $ python control.py ${N} \
@@ -55,7 +55,7 @@ run
 ./test/test_xxx-x_mt.x $m $n $k
 ```
 
-  2. If you have access of a job submission system on a cluster, change the `path_prefix` variable in `config.py`, then:
+If you have access of a job submission system on a cluster, change the `path_prefix` variable in `config.py`, then:
 ```
 $ python run_sbatch_script.py
 ```
