@@ -24,7 +24,7 @@ $ export KMP_AFFINITY=compact,1
 
 * Code generators:
 
-  * If you want to generate the different implementations for a specific algorithm:
+  1. If you want to generate the different implementations for a specific algorithm:
 
 ```
 $ python control.py ${N} \
@@ -42,7 +42,7 @@ $ python control.py 1 222 2 abc ../
 
 This script will generate the code and compile it.
 
-To further execute the code, go to the generated code directory (e.g. `${HOME}/fmm-gen/222-1_333-1_abc}`, or `../222-2_abc`). 
+To further execute the code, go to the generated code directory (e.g. `${HOME}/fmm-gen/222-1_333-1_abc`, or `../222-2_abc`). 
 
 When `$core_num` is equal to 1,
 run 
@@ -55,8 +55,10 @@ run
 ./test/test_xxx-x_mt.x $m $n $k
 ```
 
-  * If you have access of a job submission system on a cluster, change the path_prefix variable in config.py, then:
+  2. If you have access of a job submission system on a cluster, change the `path_prefix` variable in `config.py`, then:
+```
 $ python run_sbatch_script.py
+```
 
 This script will generate the code for all implementations, compile them, and submit the jobs to SLURM submission queue for execution.
 
