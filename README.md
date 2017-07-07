@@ -3,10 +3,12 @@
 Matrix multiplication (GEMM) is a core operation to numerous scientific applications. Traditional implementations of Strassen-like fast matrix multiplication (FMM) algorithms often do not perform well except for very large matrix sizes, due to the increased cost of memory movement, which is particularly noticeable for non-square matrices. Such implementations also require considerable workspace and modifications to the standard BLAS interface. We propose a code generator framework to automatically implement a large family of FMM algorithms suitable for multiplications of arbitrary matrix sizes and shapes. By representing FMM with a triple of matrices [U,V,W] that capture the linear combinations of submatrices that are formed, we can use the Kronecker product to define a multi-level representation of Strassen-like algorithms. Incorporating the matrix additions that must be performed for Strassen-like algorithms into the inherent packing and micro-kernel operations inside GEMM avoids extra workspace and reduces the cost of memory movement. Adopting the same loop structures as high-performance GEMM implementations allows parallelization of all FMM algorithms with simple but efficient data parallelism without the overhead of task parallelism. We present a simple performance model for general FMM algorithms and compare actual performance of 20+ FMM algorithms to modeled predictions. Our implementations demonstrate a performance benefit over conventional GEMM on single core and multi-core systems. This study shows that Strassen-like fast matrix multiplication can be incorporated into libraries for practical use.
 
 # Related Links
-* [Strassen's Algorithm Reloaded] (http://dl.acm.org/citation.cfm?id=3014983)
-* [Generating Families of Practical Fast Matrix Multiplication Algorithms] (http://www.cs.utexas.edu/~jianyu/papers/ipdps17.pdf)
-* [A Framework for Practical Parallel Fast Matrix Multiplication] (https://github.com/arbenson/fast-matmul)
-* [Strassen's Algorithm for Tensor Contraction] (https://github.com/flame/tblis-strassen)
+-----------
+
+* [Strassen's Algorithm Reloaded](http://dl.acm.org/citation.cfm?id=3014983)
+* [Generating Families of Practical Fast Matrix Multiplication Algorithms](http://www.cs.utexas.edu/~jianyu/papers/ipdps17.pdf)
+* [A Framework for Practical Parallel Fast Matrix Multiplication](https://github.com/arbenson/fast-matmul)
+* [Strassen's Algorithm for Tensor Contraction](https://github.com/flame/tblis-strassen)
 
 # Installation
 -----------
